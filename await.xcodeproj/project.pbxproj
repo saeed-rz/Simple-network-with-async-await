@@ -20,7 +20,19 @@
 		3059CBBA282291560045A1D9 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059CBB9282291560045A1D9 /* APIEnvironment.swift */; };
 		3059CBBD282291F20045A1D9 /* ComputerAPIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059CBBC282291F20045A1D9 /* ComputerAPIRequestProtocol.swift */; };
 		3059CBBF282293020045A1D9 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059CBBE282293020045A1D9 /* APIRequest.swift */; };
+		30C831AE2868D80B000F9762 /* ComputerAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C831AD2868D80B000F9762 /* ComputerAPITests.swift */; };
+		30C831B62868E027000F9762 /* APIRequestProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C831B52868E027000F9762 /* APIRequestProtocolMock.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30C831AF2868D80B000F9762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3059CB902822891E0045A1D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3059CB972822891F0045A1D9;
+			remoteInfo = await;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3059CB982822891F0045A1D9 /* await.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = await.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,10 +50,20 @@
 		3059CBB9282291560045A1D9 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		3059CBBC282291F20045A1D9 /* ComputerAPIRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerAPIRequestProtocol.swift; sourceTree = "<group>"; };
 		3059CBBE282293020045A1D9 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		30C831AB2868D80B000F9762 /* awaitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = awaitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30C831AD2868D80B000F9762 /* ComputerAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerAPITests.swift; sourceTree = "<group>"; };
+		30C831B52868E027000F9762 /* APIRequestProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProtocolMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3059CB952822891F0045A1D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30C831A82868D80B000F9762 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				3059CB9A2822891F0045A1D9 /* await */,
+				30C831AC2868D80B000F9762 /* awaitTests */,
 				3059CB992822891F0045A1D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				3059CB982822891F0045A1D9 /* await.app */,
+				30C831AB2868D80B000F9762 /* awaitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +136,23 @@
 			path = ComputerAPI;
 			sourceTree = "<group>";
 		};
+		30C831AC2868D80B000F9762 /* awaitTests */ = {
+			isa = PBXGroup;
+			children = (
+				30C831B42868E01C000F9762 /* Mock */,
+				30C831AD2868D80B000F9762 /* ComputerAPITests.swift */,
+			);
+			path = awaitTests;
+			sourceTree = "<group>";
+		};
+		30C831B42868E01C000F9762 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				30C831B52868E027000F9762 /* APIRequestProtocolMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +173,24 @@
 			productReference = 3059CB982822891F0045A1D9 /* await.app */;
 			productType = "com.apple.product-type.application";
 		};
+		30C831AA2868D80B000F9762 /* awaitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30C831B32868D80B000F9762 /* Build configuration list for PBXNativeTarget "awaitTests" */;
+			buildPhases = (
+				30C831A72868D80B000F9762 /* Sources */,
+				30C831A82868D80B000F9762 /* Frameworks */,
+				30C831A92868D80B000F9762 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30C831B02868D80B000F9762 /* PBXTargetDependency */,
+			);
+			name = awaitTests;
+			productName = awaitTests;
+			productReference = 30C831AB2868D80B000F9762 /* awaitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -144,6 +203,10 @@
 				TargetAttributes = {
 					3059CB972822891F0045A1D9 = {
 						CreatedOnToolsVersion = 13.3;
+					};
+					30C831AA2868D80B000F9762 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 3059CB972822891F0045A1D9;
 					};
 				};
 			};
@@ -161,6 +224,7 @@
 			projectRoot = "";
 			targets = (
 				3059CB972822891F0045A1D9 /* await */,
+				30C831AA2868D80B000F9762 /* awaitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -173,6 +237,13 @@
 				3059CBA8282289210045A1D9 /* LaunchScreen.storyboard in Resources */,
 				3059CBA5282289210045A1D9 /* Assets.xcassets in Resources */,
 				3059CBA32822891F0045A1D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30C831A92868D80B000F9762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +267,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		30C831A72868D80B000F9762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30C831B62868E027000F9762 /* APIRequestProtocolMock.swift in Sources */,
+				30C831AE2868D80B000F9762 /* ComputerAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30C831B02868D80B000F9762 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3059CB972822891F0045A1D9 /* await */;
+			targetProxy = 30C831AF2868D80B000F9762 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3059CBA12822891F0045A1D9 /* Main.storyboard */ = {
@@ -386,6 +474,40 @@
 			};
 			name = Release;
 		};
+		30C831B12868D80B000F9762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saeed.rz.awaitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/await.app/await";
+			};
+			name = Debug;
+		};
+		30C831B22868D80B000F9762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saeed.rz.awaitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/await.app/await";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -403,6 +525,15 @@
 			buildConfigurations = (
 				3059CBAD282289210045A1D9 /* Debug */,
 				3059CBAE282289210045A1D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30C831B32868D80B000F9762 /* Build configuration list for PBXNativeTarget "awaitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30C831B12868D80B000F9762 /* Debug */,
+				30C831B22868D80B000F9762 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
